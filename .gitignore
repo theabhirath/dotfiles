@@ -1,2 +1,3 @@
 .DS_Store
-find * -type l
+neofetch/neofetch
+nvim/nvim
