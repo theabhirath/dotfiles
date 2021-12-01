@@ -13,7 +13,7 @@ dir=~/dotfiles
 olddir=~/dotfiles_old
 
 # list of files/folders to symlink in homedir
-files="zshrc oh-my-zsh config/neofetch config/nvim"
+files="zshrc config/neofetch config/nvim"
 ##########
 
 # create dotfiles_old in homedir
