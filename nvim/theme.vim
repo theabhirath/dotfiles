@@ -2,12 +2,12 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
-colorscheme ghdark
+colorscheme onehalflight
 
 let g:one_allow_italics=1
 
 " Airline specific options
-let g:airline_theme='dark'
+let g:airline_theme='deus'
 let g:airline_powerline_fonts=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
