@@ -2,21 +2,15 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
-colorscheme onehalflight
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+let g:tokyonight_day_brightness = 0.01
+let g:tokyonight_lualine_bold = "true"
 
-let g:one_allow_italics=1
+colorscheme tokyonight
 
-" Airline specific options
-let g:airline_theme='deus'
-let g:airline_powerline_fonts=1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_right_alt_sep =''
-
-" Devicons
-let g:webdevicons_enable=1
-let g:webdevicons_enable_nerdtree=1
-let g:webdevicons_enable_airline_statusline=1
+:lua require('theme')
 
 " Rainbow brackets
 let g:rainbow_active = 1
