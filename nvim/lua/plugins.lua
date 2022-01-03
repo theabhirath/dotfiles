@@ -1,5 +1,5 @@
-return require('packer').startup(function() 
-    -- Packer 
+return require('packer').startup(function()
+    -- Packer
     use 'wbthomason/packer.nvim'
 
     -- Telescope: file search and finder
@@ -18,7 +18,7 @@ return require('packer').startup(function()
     use {
         'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    
+
     -- Tokyo Night Theme
     use 'folke/tokyonight.nvim'
 

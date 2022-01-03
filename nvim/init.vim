@@ -18,6 +18,7 @@ augroup end
     require('plugins')
     require('tree')
     require('lua_line')
+    require('tree_sitter')
     local neogit = require('neogit')
     neogit.setup {}
 EOF

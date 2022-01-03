@@ -1,12 +1,11 @@
 local dn = require('dark_notify')
 
-dn.run({    
+dn.run({
         onchange = function(mode)
-        if mode == 'light' then
-            vim.g.tokyonight_style = "day"       
-        else
-            vim.g.tokyonight_style = "dark"
-
+        if mode == 'dark' then
+            vim.o.background = "dark"
+        elseif mode == 'light' then
+            vim.o.background = "light"
         end
     end,
 })
