@@ -2,7 +2,7 @@ filetype plugin indent on
 syntax enable
 
 set t_Co=256
-set mouse=a " enable mouse support
+set mouse+=a " enable mouse support
 set guicursor="Cursor
 set cursorline
 
@@ -44,7 +44,7 @@ function! OpenTerminal()
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
-:lua <<EOF
+:lua << EOF
 
 local dn = require('dark_notify')
 
@@ -71,4 +71,5 @@ dn.stop()
 
 -- Start reacting again, with previous settings
 dn.run()
+
 EOF

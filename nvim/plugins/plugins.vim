@@ -3,23 +3,20 @@ call plug#begin("~/.vim/plugged")
 " UI + appearance
 Plug 'cormacrelf/dark-notify' " Light to dark theme and vice versa
 Plug 'sonph/onehalf', { 'rtp': 'vim' } " OneHalf theme
-Plug 'vim-airline/vim-airline' " Status line
-Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
 Plug 'mhinz/vim-startify' " Fancy start screen
-Plug 'scrooloose/nerdtree' " File explorer
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim' " Fuzzy finder
-Plug 'ryanoasis/vim-devicons' " File icons for nerdtree
+
+" Status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
+
+" Tab bar
+Plug 'romgrk/barbar.nvim'
+
+" Editor improvements
 Plug 'jiangmiao/auto-pairs' " Auto bracket closing
 Plug 'luochen1990/rainbow' " Rainbow brackets 
 
-" Functionality
-Plug 'tpope/vim-fugitive' " Git integration
-
-" Search bar
-Plug 'MunifTanjim/nui.nvim'
-Plug 'VonHeikemen/searchbox.nvim'
-
+" Syntax highlighting and code completion
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete for common languages
 Plug 'lervag/vimtex' " latex

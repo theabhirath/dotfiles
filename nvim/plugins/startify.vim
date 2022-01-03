@@ -6,9 +6,7 @@ let g:startify_session_persistence = 1
 let g:startify_bookmarks = [
             \ { 'c': '~/.config/nvim' },
             \ { 'z': '~/.zshrc' },
-            \ {'p': '~/Code/'},
-	    \ {'t': '~/.config/nvim/theme.vim'},
-        \ {'d': '~/dotfiles/'},]
+            \ {'d': '~/dotfiles/'},]
 
 let g:startify_lists = [
           \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
