@@ -4,5 +4,5 @@ This repository was created as a store for all my dotfiles, including my zsh con
 
 Screenshot of my zsh:
 
-!()[img/shell.png]
+![](img/shell.png)
 
