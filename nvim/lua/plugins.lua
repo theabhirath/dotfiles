@@ -2,6 +2,12 @@ return require('packer').startup(function()
     -- Packer
     use 'wbthomason/packer.nvim'
 
+    -- TreeSitter: Syntax highlighting
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
     -- Telescope: file search and finder
     use {
         'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim',}
@@ -11,7 +17,13 @@ return require('packer').startup(function()
     -- Nvim-Tree: file tree
     use {
         'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons',},
-        config = function() require'nvim-tree'.setup {} end
+        config = function() require'nvim-tree'.setup {
+            auto_close = true,
+            update_cwd = true,
+            view = {
+                auto_resize = true,
+            }
+        } end
     }
 
     -- Lualine: status line for neovim
@@ -31,8 +43,14 @@ return require('packer').startup(function()
     end,
     }
 
-    -- Git integration 
+    -- Git integration
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
+    -- Load all lua files
+    use { 'mrjones2014/load-all.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+    -- Fancy start page
+    use { 'goolord/alpha-nvim', config = function () require('plugins.startAlpha')end
+    }
 end)
 

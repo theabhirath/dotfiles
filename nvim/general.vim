@@ -1,6 +1,10 @@
 filetype plugin indent on
 syntax enable
 
+" Space as leader key
+nnoremap <SPACE> <Nop>
+map <SPACE> <leader>
+
 set mouse+=a " enable mouse support
 set guicursor= " Cursor
 set cursorline

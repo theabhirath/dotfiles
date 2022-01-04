@@ -4,9 +4,6 @@ filetype plugin on
 " Python3 location
 let g:python3_host_prog="~/miniforge3/bin/"
 
-" Loading plugins
-source ~/.config/nvim/plugins/plugins.vim
-
 " Update packer plugins whenever plugin.lua is updated
 augroup packer_user_config
     autocmd!
@@ -16,15 +13,14 @@ augroup end
 " Packer plugins
 :lua << EOF
     require('plugins')
-    require('tree')
-    require('lua_line')
-    require('tree_sitter')
-    local neogit = require('neogit')
-    neogit.setup {}
+    require('load-all')(os.getenv('HOME') .. '/.config/nvim/lua/plugins')
 EOF
 
+" Loading vimscript plugins
+source ~/.config/nvim/nvim_plugins/plugins.vim
+
 " Plugin settings
-for f in split(glob('~/.config/nvim/plugins/*.vim'), '\n')
+for f in split(glob('~/.config/nvim/nvim_plugins/*.vim'), '\n')
 	exe 'source' f
 endfor
 

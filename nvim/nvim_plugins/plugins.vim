@@ -2,7 +2,6 @@ call plug#begin("~/.vim/plugged")
 
 " UI + appearance
 Plug 'cormacrelf/dark-notify' " Light to dark theme and vice versa
-Plug 'mhinz/vim-startify' " Fancy start screen
 
 " Tab bar
 Plug 'romgrk/barbar.nvim'
@@ -11,13 +10,11 @@ Plug 'romgrk/barbar.nvim'
 Plug 'jiangmiao/auto-pairs' " Auto bracket closing
 Plug 'luochen1990/rainbow' " Rainbow brackets 
 
-" Syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'lervag/vimtex' " latex
+" Latex support
+Plug 'lervag/vimtex'
 
 " Discord Presence
 Plug 'andweeb/presence.nvim'
