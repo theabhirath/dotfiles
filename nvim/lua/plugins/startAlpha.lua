@@ -7,11 +7,11 @@ dashboard.section.buttons.val = {
     dashboard.button( "SPC f f" , "  Find file" , ":Telescope find_files<CR>"),
     dashboard.button( "SPC f g", "  Find inside file", ":Telescope live_grep<CR>"),
     dashboard.button( "SPC f h", "  Recently Used Files", ":Telescope oldfiles<CR>"),
-    dashboard.button( "SPC c c", "  Nvim Configuration", ":cd ~/.config/nvim <BAR> :e init.vim <BAR> :lua Toggle()<CR>"),
+    dashboard.button( "SPC c c", "  Nvim Configuration", ":cd ~/.config/nvim <BAR> :e init.lua <BAR> :lua FileExplorerToggle()<CR>"),
     dashboard.button( "q", "  Quit NVIM" , ":q<CR>")
 }
 
--- quote imn footer
+-- quote in footer
 local handle = io.popen('fortune -s')
 local fortune = handle:read("*a")
 handle:close()
