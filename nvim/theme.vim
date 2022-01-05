@@ -6,7 +6,7 @@ endif
 
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-let g:tokyonight_day_brightness = 0.01
+let g:tokyonight_day_brightness = 0.4
 let g:tokyonight_lualine_bold = "true"
 let g:tokyonight_dark_sidebar = "false"
 let g:tokyonight_transparent_sidebar = "true"

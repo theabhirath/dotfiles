@@ -2,7 +2,7 @@
 
 local view = require'nvim-tree.view'
 
-function toggle()
+function Toggle()
   if view.win_open() then
     require'nvim-tree'.close()
     require'bufferline.state'.set_offset(0)
@@ -13,4 +13,31 @@ function toggle()
 end
 
 -- mapping to toggle the tree
-vim.api.nvim_set_keymap('n', '<C-b>', ':lua toggle()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-b>', ':lua Toggle()<CR>', { noremap = true, silent = true })
+
+vim.g.nvim_tree_special_files = {}
+
+vim.cmd([[
+    let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "◌",
+    \   'deleted': "",
+    \   'ignored': "",
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   }
+    \ }]])

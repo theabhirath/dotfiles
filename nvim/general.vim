@@ -1,6 +1,9 @@
 filetype plugin indent on
 syntax enable
 
+" Python3 location
+let g:python3_host_prog="~/miniforge3/bin/"
+
 " Space as leader key
 nnoremap <SPACE> <Nop>
 map <SPACE> <leader>

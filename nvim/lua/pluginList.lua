@@ -1,4 +1,5 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
+
     -- Packer
     use 'wbthomason/packer.nvim'
 
@@ -50,7 +51,38 @@ return require('packer').startup(function()
     use { 'mrjones2014/load-all.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     -- Fancy start page
-    use { 'goolord/alpha-nvim', config = function () require('plugins.startAlpha')end
+    use { 'goolord/alpha-nvim', config = function () require('plugins.startAlpha') end }
+
+    -- Orgmode
+    use {'nvim-orgmode/orgmode', config = function() require('orgmode').setup() end }
+
+    -- LSP config
+    use { 'neovim/nvim-lspconfig'}
+    -- LSP installer
+    use { 'williamboman/nvim-lsp-installer' }
+
+    -- Auto-completion
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer' }
+    use { 'hrsh7th/cmp-path' }
+    use { 'hrsh7th/cmp-cmdline' }
+    use { 'hrsh7th/nvim-cmp' }
+
+    -- Snippets
+    use { 'hrsh7th/cmp-vsnip' }
+    use { 'hrsh7th/vim-vsnip' }
+
+    -- Discord presence
+    use { 'andweeb/presence.nvim' }
+
+    -- Tab bar
+    use {
+      'romgrk/barbar.nvim',
+      requires = {'kyazdani42/nvim-web-devicons'}
     }
+
+    -- Light to dark theme and vice versa
+    use { 'cormacrelf/dark-notify' }
+
 end)
 

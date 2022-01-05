@@ -1,3 +1,0 @@
-{
-    "clangd.fallbackFlags": ["-std=c11", "-std=c++14"]
-}
