@@ -9,7 +9,7 @@ local map = vim.api.nvim_set_keymap
 map('n', '<SPACE>', '', { noremap = true, silent = true })
 map('', '<SPACE>', '<Leader>', { silent = true })
 
--- Enable mouse use 
+-- Enable mouse use
 vim.o.mouse = 'a'
 vim.o.guicursor = true
 

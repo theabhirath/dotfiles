@@ -128,4 +128,4 @@ unset __conda_setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f "/Users/theabhirath/.ghcup/env" ] && source "/Users/theabhirath/.ghcup/env" # ghcup-env
 
-neofetch
+macchina

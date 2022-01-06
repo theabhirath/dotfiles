@@ -10,14 +10,12 @@ return require('packer').startup(function(use)
     }
 
     -- Telescope: file search and finder
-    use {
-        'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim',}
-    }
+    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
 
     -- Nvim-Tree: file tree
     use {
-        'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons',},
+        'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require'nvim-tree'.setup {
             auto_close = true,
             update_cwd = true,
@@ -28,9 +26,7 @@ return require('packer').startup(function(use)
     }
 
     -- Lualine: status line for neovim
-    use {
-        'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
     -- Tokyo Night Theme
     use 'folke/tokyonight.nvim'
@@ -53,9 +49,6 @@ return require('packer').startup(function(use)
     -- Fancy start page
     use { 'goolord/alpha-nvim', config = function () require('plugins.startAlpha') end }
 
-    -- Orgmode
-    use {'nvim-orgmode/orgmode', config = function() require('orgmode').setup() end }
-
     -- LSP config
     use { 'neovim/nvim-lspconfig'}
     -- LSP installer
@@ -69,8 +62,8 @@ return require('packer').startup(function(use)
     use { 'hrsh7th/nvim-cmp' }
 
     -- Snippets
-    use { 'hrsh7th/cmp-vsnip' }
-    use { 'hrsh7th/vim-vsnip' }
+    use { 'L3MON4D3/LuaSnip' }
+    use { 'saadparwaiz1/cmp_luasnip' }
 
     -- Discord presence
     use { 'andweeb/presence.nvim' }
@@ -84,5 +77,7 @@ return require('packer').startup(function(use)
     -- Light to dark theme and vice versa
     use { 'cormacrelf/dark-notify' }
 
+    -- Searchbox
+    use { 'VonHeikemen/searchbox.nvim', requires = { 'MunifTanjim/nui.nvim' } }
 end)
 

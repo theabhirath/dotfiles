@@ -2,6 +2,7 @@ vim.o.termguicolors = true
 vim.o.t_Co = 256
 
 -- Tokyo Night theme
+vim.cmd('autocmd ColorScheme * highlight link SearchBoxMatch Search')
 vim.cmd('colorscheme tokyonight')
 
 vim.g.tokyonight_italic_functions = 1
