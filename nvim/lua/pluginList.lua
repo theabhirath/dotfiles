@@ -51,8 +51,6 @@ return require('packer').startup(function(use)
 
     -- LSP config
     use { 'neovim/nvim-lspconfig'}
-    -- LSP installer
-    use { 'williamboman/nvim-lsp-installer' }
 
     -- Auto-completion
     use { 'hrsh7th/cmp-nvim-lsp' }

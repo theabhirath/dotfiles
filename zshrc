@@ -140,4 +140,7 @@ export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
+# jdtls - java language server
+export JDTLS_HOME="$HOME/jdt-language-server"
+
 macchina
