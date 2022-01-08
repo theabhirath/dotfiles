@@ -3,6 +3,9 @@ vim.cmd('filetype plugin indent on')
 -- Python executable location
 vim.g.python3_host_prog = "~/miniforge3/bin/"
 
+-- Flavour of TeX used is LaTeX
+vim.g.tex_flavour = "latex"
+
 local map = vim.api.nvim_set_keymap
 
 -- Mapping leader to SPACE

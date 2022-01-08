@@ -70,7 +70,7 @@ ZSH_CUSTOM=~/dotfiles/oh-my-zsh/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos npm zsh-autosuggestions)
+plugins=(git macos npm zsh-autosuggestions ruby brew bundler cabal colored-man-pages fzf ripgrep rust stack)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='nvim'
+else
+    export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -107,6 +107,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 autoload -U promptinit; promptinit
 prompt typewritten
 
+# typewritten settings
 export TYPEWRITTEN_PROMPT_LAYOUT="singleline_verbose"
 export TYPEWRITTEN_RELATIVE_PATH="adaptive"
 
@@ -125,7 +126,18 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f "/Users/theabhirath/.ghcup/env" ] && source "/Users/theabhirath/.ghcup/env" # ghcup-env
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fuzzy finder
+
+[ -f "/Users/theabhirath/.ghcup/env" ] && source "/Users/theabhirath/.ghcup/env" # ghcup for haskell
+
+# rbenv for ruby
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
+export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
+
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 
 macchina
