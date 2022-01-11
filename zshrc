@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/theabhirath/.oh-my-zsh"
@@ -120,7 +120,7 @@ else
     if [ -f "/Users/theabhirath/miniforge3/etc/profile.d/conda.sh" ]; then
         . "/Users/theabhirath/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/theabhirath/miniforge3/bin:$PATH"
+        export PATH="$PATH:/Users/theabhirath/miniforge3/bin"
     fi
 fi
 unset __conda_setup
@@ -132,15 +132,18 @@ unset __conda_setup
 
 # rbenv for ruby
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$PATH:$HOME/.rbenv/bin"
 eval "$(rbenv init - zsh)"
 
-export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
+export PATH="$PATH:$HOME/.gem/ruby/3.0.0/bin"
 
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
 # jdtls - java language server
 export JDTLS_HOME="$HOME/jdt-language-server"
+
+# LLVM
+export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 
 macchina

@@ -64,3 +64,6 @@ require'lspconfig'.vimls.setup{}
 
 -- tex language server
 require'lspconfig'.texlab.setup{}
+
+-- rust language server
+require('rust-tools').setup({})

@@ -18,19 +18,17 @@ cmp.setup({
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
     sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'luasnip' },
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
     }, {
-      { name = 'buffer' },
+        { name = 'buffer' },
     })
-    })
-
-    -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+})
     cmp.setup.cmdline('/', {
     sources = {
       { name = 'buffer' }
     }
-    })
+})
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline(':', {
@@ -49,4 +47,8 @@ for _, server in ipairs(servers) do
     require('lspconfig')[server].setup {
         capabilities = capabilities
     }
+
+-- AutoPairs
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 end

@@ -1,18 +1,5 @@
--- function to toggle the tree
-local view = require'nvim-tree.view'
-
-function FileExplorerToggle()
-    if view.win_open() then
-        require'nvim-tree'.close()
-        require'bufferline.state'.set_offset(0)
-    else
-        require'bufferline.state'.set_offset(31, 'File Explorer')
-        require'nvim-tree'.find_file(true)
-    end
-end
-
 -- mapping to toggle the tree
-vim.api.nvim_set_keymap('n', '<C-b>', ':lua FileExplorerToggle()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 vim.g.nvim_tree_special_files = {}
 

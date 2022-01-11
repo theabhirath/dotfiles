@@ -1,5 +1,6 @@
 -- Search algorithm
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('ui-select')
 
 local map = vim.api.nvim_set_keymap
 

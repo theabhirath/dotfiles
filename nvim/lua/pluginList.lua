@@ -1,17 +1,15 @@
 return require('packer').startup(function(use)
 
     -- Packer
-    use 'wbthomason/packer.nvim'
+    use { 'wbthomason/packer.nvim' }
 
     -- TreeSitter: Syntax highlighting
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- Telescope: file search and finder
-    use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
 
     -- Nvim-Tree: file tree
     use {
@@ -51,6 +49,7 @@ return require('packer').startup(function(use)
 
     -- LSP config
     use { 'neovim/nvim-lspconfig'}
+    use { 'arkav/lualine-lsp-progress' } -- progress of loading language server
 
     -- Auto-completion
     use { 'hrsh7th/cmp-nvim-lsp' }
@@ -67,15 +66,22 @@ return require('packer').startup(function(use)
     use { 'andweeb/presence.nvim' }
 
     -- Tab bar
-    use {
-      'romgrk/barbar.nvim',
-      requires = {'kyazdani42/nvim-web-devicons'}
-    }
+    use { 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
     -- Light to dark theme and vice versa
     use { 'cormacrelf/dark-notify' }
 
     -- Searchbox
     use { 'VonHeikemen/searchbox.nvim', requires = { 'MunifTanjim/nui.nvim' } }
+
+    -- Rust support
+    use { 'simrat39/rust-tools.nvim' }
+
+    -- Debugging
+    use { 'mfussenegger/nvim-dap' }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+    -- AutoPairs
+    use { 'windwp/nvim-autopairs' }
 end)
 
