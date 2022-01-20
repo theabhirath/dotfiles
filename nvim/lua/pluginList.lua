@@ -29,15 +29,6 @@ return require('packer').startup(function(use)
     -- Tokyo Night Theme
     use 'folke/tokyonight.nvim'
 
-    -- Terminal inside neovim
-    use {
-    's1n7ax/nvim-terminal',
-    config = function()
-        vim.o.hidden = true
-        require('nvim-terminal').setup()
-    end,
-    }
-
     -- Git integration
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
@@ -68,14 +59,8 @@ return require('packer').startup(function(use)
     -- Tab bar
     use { 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
-    -- Light to dark theme and vice versa
-    use { 'cormacrelf/dark-notify' }
-
     -- Searchbox
     use { 'VonHeikemen/searchbox.nvim', requires = { 'MunifTanjim/nui.nvim' } }
-
-    -- Rust support
-    use { 'simrat39/rust-tools.nvim' }
 
     -- Debugging
     use { 'mfussenegger/nvim-dap' }
@@ -83,5 +68,8 @@ return require('packer').startup(function(use)
 
     -- AutoPairs
     use { 'windwp/nvim-autopairs' }
+
+    -- Kitty syntax highlighting
+    use { 'fladson/vim-kitty' }
 end)
 

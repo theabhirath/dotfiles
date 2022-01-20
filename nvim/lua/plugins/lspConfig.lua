@@ -34,9 +34,6 @@ require'lspconfig'.pyright.setup{}
 -- Java language server
 require'lspconfig'.jdtls.setup{}
 
--- Haskell language server
-require'lspconfig'.hls.setup{}
-
 -- html, css, js, json language server
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -64,6 +61,3 @@ require'lspconfig'.vimls.setup{}
 
 -- tex language server
 require'lspconfig'.texlab.setup{}
-
--- rust language server
-require('rust-tools').setup({})

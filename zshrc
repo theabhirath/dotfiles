@@ -70,7 +70,7 @@ ZSH_CUSTOM=~/dotfiles/oh-my-zsh/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos npm zsh-autosuggestions ruby brew bundler cabal colored-man-pages fzf ripgrep rust stack)
+plugins=(git macos npm zsh-autosuggestions ruby brew bundler colored-man-pages fzf ripgrep)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,8 +128,6 @@ unset __conda_setup
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fuzzy finder
 
-[ -f "/Users/theabhirath/.ghcup/env" ] && source "/Users/theabhirath/.ghcup/env" # ghcup for haskell
-
 # rbenv for ruby
 
 export PATH="$PATH:$HOME/.rbenv/bin"
@@ -146,4 +144,9 @@ export JDTLS_HOME="$HOME/jdt-language-server"
 # LLVM
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 
+# Kitty
+export KITTY_CONFIG_DIRECTORY="$HOME/dotfiles/kitty"
+
+# start screen
 macchina
+
