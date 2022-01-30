@@ -128,24 +128,11 @@ unset __conda_setup
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fuzzy finder
 
-# rbenv for ruby
-
-export PATH="$PATH:$HOME/.rbenv/bin"
-eval "$(rbenv init - zsh)"
-
-export PATH="$PATH:$HOME/.gem/ruby/3.0.0/bin"
-
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
-
 # jdtls - java language server
 export JDTLS_HOME="$HOME/jdt-language-server"
 
 # LLVM
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
-
-# Kitty
-export KITTY_CONFIG_DIRECTORY="$HOME/dotfiles/kitty"
 
 # start screen
 macchina

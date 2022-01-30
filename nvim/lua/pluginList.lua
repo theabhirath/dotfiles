@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
     -- AutoPairs
     use { 'windwp/nvim-autopairs' }
 
-    -- Kitty syntax highlighting
-    use { 'fladson/vim-kitty' }
+    -- Copilot
+    use { 'github/copilot.vim' }
 end)
 

@@ -1,5 +1,8 @@
 vim.cmd('filetype plugin indent on')
 
+-- wrap
+vim.wo.wrap = true
+
 -- Python executable location
 vim.g.python3_host_prog = "~/miniforge3/bin/"
 
@@ -36,3 +39,6 @@ vim.o.number = true
 
 -- Don't show mode (lualine does it)
 vim.cmd('set noshowmode')
+
+-- update time
+vim.cmd('set updatetime=500')
