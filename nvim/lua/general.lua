@@ -42,3 +42,4 @@ vim.cmd('set noshowmode')
 
 -- update time
 vim.cmd('set updatetime=500')
+

@@ -103,14 +103,6 @@ fi
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Set typewritten ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt typewritten
-
-# typewritten settings
-export TYPEWRITTEN_PROMPT_LAYOUT="singleline_verbose"
-export TYPEWRITTEN_RELATIVE_PATH="adaptive"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/theabhirath/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -137,3 +129,4 @@ export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 # start screen
 macchina
 
+eval "$(starship init zsh)"

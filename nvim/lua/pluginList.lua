@@ -71,5 +71,8 @@ return require('packer').startup(function(use)
 
     -- Copilot
     use { 'github/copilot.vim' }
+
+    -- Markdown preview with glow
+    use { 'ellisonleao/glow.nvim' }
 end)
 
