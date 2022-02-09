@@ -50,8 +50,8 @@ return require('packer').startup(function(use)
     use { 'hrsh7th/nvim-cmp' }
 
     -- Snippets
-    use { 'L3MON4D3/LuaSnip' }
-    use { 'saadparwaiz1/cmp_luasnip' }
+    use { 'hrsh7th/cmp-vsnip' }
+    use { 'hrsh7th/vim-vsnip'}
 
     -- Discord presence
     use { 'andweeb/presence.nvim' }

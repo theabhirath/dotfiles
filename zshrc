@@ -126,6 +126,9 @@ export JDTLS_HOME="$HOME/jdt-language-server"
 # LLVM
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 
+# ghcup
+export PATH="$HOME/.ghcup/bin:$PATH"
+
 # start screen
 macchina
 
