@@ -3,4 +3,3 @@ if status is-interactive
     macchina
 	starship init fish | source
 end
-
