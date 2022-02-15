@@ -27,10 +27,7 @@ return require('packer').startup(function(use)
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
     -- Tokyo Night Theme
-    use 'folke/tokyonight.nvim'
-
-    -- Git integration
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use { 'folke/tokyonight.nvim' }
 
     -- Load all lua files
     use { 'mrjones2014/load-all.nvim', requires = 'nvim-lua/plenary.nvim' }
@@ -74,5 +71,8 @@ return require('packer').startup(function(use)
 
     -- Markdown preview with glow
     use { 'ellisonleao/glow.nvim' }
+
+    -- legendary
+    use { 'mrjones2014/legendary.nvim' }
 end)
 

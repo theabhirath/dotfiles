@@ -7,9 +7,9 @@ dashboard.section.buttons.val = {
     dashboard.button( "SPC f f" , "  Find file" , ":Telescope find_files<CR>"),
     dashboard.button( "SPC f g", "  Find inside file", ":Telescope live_grep<CR>"),
     dashboard.button( "SPC f h", "  Recently Used Files", ":Telescope oldfiles<CR>"),
-    dashboard.button( "SPC c c", "  Nvim Configuration", ":cd ~/.config/nvim <BAR> :e init.lua <BAR> :NvimTreeToggle<CR>"),
-     dashboard.button( "SPC d d", "· Dotfiles", ":cd ~/dotfiles <BAR> :e README.md <BAR> :NvimTreeToggle()<CR>"),
-      dashboard.button( "SPC z z", ">  Zsh configuration", ":e ~/.zshrc<CR>"),
+    dashboard.button( "SPC n c", "  Nvim Configuration", ":cd ~/.config/nvim <BAR> :e init.lua <BAR> :NvimTreeToggle<CR>"),
+     dashboard.button( "SPC d c", "· Dotfiles", ":cd ~/dotfiles <BAR> :e README.md <BAR> :NvimTreeToggle<CR>"),
+      dashboard.button( "SPC f c", ">  Fish configuration", ":cd ~/.config/fish <BAR> :e config.fish <BAR> :NvimTreeToggle<CR>"),
     dashboard.button( "q", "  Quit NVIM" , ":q<CR>")
 }
 
