@@ -48,18 +48,6 @@ require'lspconfig'.jdtls.setup{}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.html.setup {
-    capabilities = capabilities,
-}
-
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.jsonls.setup {
-  capabilities = capabilities,
-}
-
 -- JavaScript/TypeScript language server
 require'lspconfig'.tsserver.setup{}
 
@@ -72,5 +60,3 @@ require'lspconfig'.vimls.setup{}
 -- haskell language server
 require'lspconfig'.hls.setup{}
 
--- julia language server
-require'lspconfig'.julials.setup{}

@@ -132,4 +132,6 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 # start screen
 macchina
 
+# starship
+export STARSHIP_CONFIG=~/dotfiles/starship.toml
 eval "$(starship init zsh)"
