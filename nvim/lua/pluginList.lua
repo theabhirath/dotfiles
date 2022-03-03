@@ -56,9 +56,6 @@ return require('packer').startup(function(use)
     -- Tab bar
     use { 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
-    -- Searchbox
-    use { 'VonHeikemen/searchbox.nvim', requires = { 'MunifTanjim/nui.nvim' } }
-
     -- Debugging
     use { 'mfussenegger/nvim-dap' }
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
@@ -74,5 +71,8 @@ return require('packer').startup(function(use)
 
     -- legendary
     use { 'mrjones2014/legendary.nvim' }
+
+    -- Indent guides
+    use { 'lukas-reineke/indent-blankline.nvim' }
 end)
 

@@ -7,7 +7,6 @@ require('bufferline').setup{
                 text_align = "left"
             }
         },
-        diagnostics = "nvim_lsp",
-        separator_style = "slant"
+        diagnostics = "nvim_lsp"
     }
 }
