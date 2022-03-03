@@ -4,3 +4,7 @@ add_newline = true
 [conda]
 ignore_base = false
 
+[status]
+disabled = false
+
+
