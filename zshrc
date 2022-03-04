@@ -123,6 +123,9 @@ unset __conda_setup
 # jdtls - java language server
 export JDTLS_HOME="$HOME/jdt-language-server"
 
+# rbenv for ruby
+eval "$(rbenv init - zsh)"
+
 # LLVM
 export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
 
@@ -137,3 +140,4 @@ export STARSHIP_CONFIG=~/dotfiles/starship.toml
 eval "$(starship init zsh)"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,13 +1,12 @@
 vim.cmd('filetype plugin indent on')
 
+vim.cmd('set cursorline')
+
 -- wrap
 vim.wo.wrap = true
 
 -- Python executable location
 vim.g.python3_host_prog = "~/miniforge3/bin/"
-
--- Flavour of TeX used is LaTeX
-vim.g.tex_flavour = "latex"
 
 local map = vim.api.nvim_set_keymap
 
@@ -42,4 +41,5 @@ vim.cmd('set noshowmode')
 
 -- update time
 vim.cmd('set updatetime=500')
+
 

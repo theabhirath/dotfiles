@@ -56,10 +56,6 @@ return require('packer').startup(function(use)
     -- Tab bar
     use { 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
-    -- Debugging
-    use { 'mfussenegger/nvim-dap' }
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
     -- AutoPairs
     use { 'windwp/nvim-autopairs' }
 
@@ -69,10 +65,18 @@ return require('packer').startup(function(use)
     -- Markdown preview with glow
     use { 'ellisonleao/glow.nvim' }
 
-    -- legendary
-    use { 'mrjones2014/legendary.nvim' }
-
     -- Indent guides
     use { 'lukas-reineke/indent-blankline.nvim' }
+
+    -- LSP addons
+    use { 'folke/trouble.nvim', config = function() require("trouble").setup {} end }
+    use { 'tami5/lspsaga.nvim' }
+
+    -- Pair replacements
+    use { 'tpope/vim-surround' }
+
+    -- Comment toggles
+    use { 'tpope/vim-commentary' }
+
 end)
 
