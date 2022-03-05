@@ -44,13 +44,6 @@ require'lspconfig'.pyright.setup{}
 -- Java language server
 require'lspconfig'.jdtls.setup{}
 
--- html, css, js, json language server
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
--- JavaScript/TypeScript language server
-require'lspconfig'.tsserver.setup{}
-
 -- C/C++ language server
 require'lspconfig'.clangd.setup{}
 

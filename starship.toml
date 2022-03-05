@@ -7,4 +7,7 @@ ignore_base = false
 [status]
 disabled = false
 
+[lua]
+symbol = ""
+
 
