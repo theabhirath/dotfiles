@@ -70,7 +70,7 @@ ZSH_CUSTOM=~/dotfiles/oh-my-zsh/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos npm zsh-autosuggestions ruby brew bundler colored-man-pages fzf ripgrep)
+plugins=(git macos npm zsh-autosuggestions brew bundler colored-man-pages fzf ripgrep)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,12 +123,6 @@ unset __conda_setup
 # jdtls - java language server
 export JDTLS_HOME="$HOME/jdt-language-server"
 
-# rbenv for ruby
-eval "$(rbenv init - zsh)"
-
-# LLVM
-export PATH="$PATH:/opt/homebrew/opt/llvm/bin"
-
 # ghcup
 export PATH="$HOME/.ghcup/bin:$PATH"
 
@@ -141,3 +135,6 @@ eval "$(starship init zsh)"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Julia multithreading
+export JULIA_NUM_THREADS=auto

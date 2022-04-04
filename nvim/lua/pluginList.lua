@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
     use {
         'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require'nvim-tree'.setup {
-            auto_close = true,
             update_cwd = true,
             view = {
                 auto_resize = true,
@@ -77,6 +76,8 @@ return require('packer').startup(function(use)
 
     -- Comment toggles
     use { 'tpope/vim-commentary' }
+
+    use {'nvim-orgmode/orgmode', config = function() require('orgmode').setup{} end }
 
 end)
 

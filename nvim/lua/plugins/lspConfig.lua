@@ -53,3 +53,6 @@ require'lspconfig'.vimls.setup{}
 -- haskell language server
 require'lspconfig'.hls.setup{}
 
+-- julia language server
+require'lspconfig'.julials.setup{}
+
