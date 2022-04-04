@@ -49,14 +49,11 @@ return require('packer').startup(function(use)
     use { 'hrsh7th/cmp-vsnip' }
     use { 'hrsh7th/vim-vsnip'}
 
-    -- Discord presence
-    use { 'andweeb/presence.nvim' }
-
     -- Tab bar
     use { 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
     -- AutoPairs
-    use { 'windwp/nvim-autopairs' }
+    use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup{} end }
 
     -- Copilot
     use { 'github/copilot.vim' }
@@ -68,16 +65,16 @@ return require('packer').startup(function(use)
     use { 'lukas-reineke/indent-blankline.nvim' }
 
     -- LSP addons
-    use { 'folke/trouble.nvim', config = function() require("trouble").setup {} end }
+    use { 'folke/trouble.nvim', config = function() require("trouble").setup{} end }
     use { 'tami5/lspsaga.nvim' }
 
     -- Pair replacements
     use { 'tpope/vim-surround' }
 
     -- Comment toggles
-    use { 'tpope/vim-commentary' }
+    use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
 
-    use {'nvim-orgmode/orgmode', config = function() require('orgmode').setup{} end }
-
+    -- Scrollbar
+    use { 'dstein64/nvim-scrollview' }
 end)
 
