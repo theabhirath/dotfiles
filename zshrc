@@ -123,9 +123,6 @@ unset __conda_setup
 # jdtls - java language server
 export JDTLS_HOME="$HOME/jdt-language-server"
 
-# ghcup
-export PATH="$HOME/.ghcup/bin:$PATH"
-
 # start screen
 macchina
 
@@ -138,3 +135,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Julia multithreading
 export JULIA_NUM_THREADS=auto
+
+# MySQL
+export PATH=$PATH:/usr/local/mysql/bin
+# export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$PATH"
