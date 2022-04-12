@@ -5,6 +5,8 @@ vim.cmd('set cursorline')
 -- wrap
 vim.wo.wrap = true
 
+vim.wo.fillchars = 'eob: '
+
 -- Python executable location
 vim.g.python3_host_prog = "~/miniforge3/bin/"
 

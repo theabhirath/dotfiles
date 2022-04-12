@@ -70,7 +70,7 @@ ZSH_CUSTOM=~/dotfiles/oh-my-zsh/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos npm zsh-autosuggestions brew bundler colored-man-pages fzf ripgrep)
+plugins=(git macos npm brew bundler colored-man-pages fzf ripgrep)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +100,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -112,23 +113,13 @@ else
     if [ -f "/Users/theabhirath/miniforge3/etc/profile.d/conda.sh" ]; then
         . "/Users/theabhirath/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="$PATH:/Users/theabhirath/miniforge3/bin"
+        export PATH="/Users/theabhirath/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fuzzy finder
-
-# jdtls - java language server
-export JDTLS_HOME="$HOME/jdt-language-server"
-
-# start screen
-macchina
-
-# starship
-export STARSHIP_CONFIG=~/dotfiles/starship.toml
-eval "$(starship init zsh)"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -138,4 +129,4 @@ export JULIA_NUM_THREADS=auto
 
 # MySQL
 export PATH=$PATH:/usr/local/mysql/bin
-# export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$PATH"
+#export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$PATH"
