@@ -58,12 +58,6 @@ return require('packer').startup(function(use)
     -- Copilot
     use { 'github/copilot.vim' }
 
-    -- Markdown preview with glow
-    use { 'ellisonleao/glow.nvim' }
-
-    -- Indent guides
-    use { 'lukas-reineke/indent-blankline.nvim' }
-
     -- LSP addons
     use { 'folke/trouble.nvim', config = function() require("trouble").setup{} end }
     use { 'tami5/lspsaga.nvim' }

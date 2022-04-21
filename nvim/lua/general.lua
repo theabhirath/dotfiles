@@ -1,24 +1,25 @@
-vim.cmd('filetype plugin indent on')
+-- highlight line with the cursor
+vim.cmd([[set cursorline]])
 
-vim.cmd('set cursorline')
+-- don't show ~ for non-existent lines
+vim.cmd([[set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾]])
 
 -- wrap
 vim.wo.wrap = true
 
-vim.wo.fillchars = 'eob: '
-
 -- Python executable location
 vim.g.python3_host_prog = "~/miniforge3/bin/"
 
-local map = vim.api.nvim_set_keymap
-
 -- Mapping leader to SPACE
-map('n', '<SPACE>', '', { noremap = true, silent = true })
-map('', '<SPACE>', '<Leader>', { silent = true })
+vim.api.nvim_set_keymap('n', '<SPACE>', '', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<SPACE>', '<Leader>', { silent = true })
 
 -- Enable mouse use
 vim.o.mouse = 'a'
 vim.o.guicursor = true
+
+-- vertical cursor while editing
+vim.cmd('set guicursor=i:ver25-iCursor')
 
 -- Tab is 4 spaces
 vim.opt.tabstop = 4
@@ -43,5 +44,4 @@ vim.cmd('set noshowmode')
 
 -- update time
 vim.cmd('set updatetime=500')
-
 

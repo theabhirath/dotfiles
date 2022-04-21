@@ -10,7 +10,8 @@ vim.api.nvim_exec(
 -- Lualine settings
 require('lualine').setup {
   options = {
-    theme = 'tokyonight'
+    theme = 'tokyonight',
+    globalstatus = true
   },
   sections = {
 		lualine_c = {
