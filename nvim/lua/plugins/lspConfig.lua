@@ -28,12 +28,6 @@ require'lspconfig'.sumneko_lua.setup {
   },
 }
 
--- Python language server
-require'lspconfig'.pyright.setup{}
-
--- Java language server
-require'lspconfig'.jdtls.setup{}
-
 -- C/C++ language server
 require'lspconfig'.clangd.setup{}
 
