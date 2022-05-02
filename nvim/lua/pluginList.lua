@@ -14,12 +14,7 @@ return require('packer').startup(function(use)
     -- Nvim-Tree: file tree
     use {
         'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
-        config = function() require'nvim-tree'.setup {
-            update_cwd = true,
-            view = {
-                auto_resize = true,
-            }
-        } end
+        config = function() require'nvim-tree'.setup {} end
     }
 
     -- Lualine: status line for neovim
@@ -70,5 +65,7 @@ return require('packer').startup(function(use)
 
     -- Scrollbar
     use { 'dstein64/nvim-scrollview' }
+
+    use { 'gelguy/wilder.nvim', requires = { 'romgrk/fzy-lua-native' } }
 end)
 

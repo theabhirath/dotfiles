@@ -29,3 +29,7 @@ vim.cmd([[
     \   'symlink_open': "",
     \   }
     \ }]])
+
+require'nvim-tree'.setup {
+    update_cwd = true,
+}
