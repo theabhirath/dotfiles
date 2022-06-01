@@ -12,10 +12,7 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope-ui-select.nvim' }
 
     -- Nvim-Tree: file tree
-    use {
-        'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'},
-        config = function() require'nvim-tree'.setup {} end
-    }
+    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }}
 
     -- Lualine: status line for neovim
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
