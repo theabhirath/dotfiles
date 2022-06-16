@@ -5,7 +5,6 @@ vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, s
 
 vim.g.nvim_tree_special_files = {}
 
-
 require('nvim-tree').setup{
     update_cwd = true
 }
