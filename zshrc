@@ -130,7 +130,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export JULIA_NUM_THREADS=4
+export JULIA_NUM_THREADS=auto
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
