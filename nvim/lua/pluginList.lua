@@ -17,8 +17,8 @@ return require('packer').startup(function(use)
     -- Lualine: status line for neovim
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
-    -- Tokyo Night Theme
-    use { 'folke/tokyonight.nvim' }
+    -- Ayu theme
+    use { 'Shatur/neovim-ayu' }
 
     -- Load all lua files
     use { 'mrjones2014/load-all.nvim', requires = 'nvim-lua/plenary.nvim' }

@@ -1,5 +1,6 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -130,6 +131,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Number of Julia threads to use
 export JULIA_NUM_THREADS=auto
 
 export NVM_DIR="$HOME/.nvm"
@@ -142,7 +145,11 @@ eval "$(rbenv init - zsh)"
 # starship prompt
 eval "$(starship init zsh)"
 
+# Python 3.10
+export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
+
 macchina
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+
