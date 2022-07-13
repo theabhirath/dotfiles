@@ -11,7 +11,8 @@ vim.api.nvim_exec(
 require('lualine').setup {
   options = {
     theme = 'ayu',
-    globalstatus = true
+    globalstatus = true,
+    disabled_filetypes = { 'packer', 'NvimTree' }
   },
   sections = {
 		lualine_c = {
